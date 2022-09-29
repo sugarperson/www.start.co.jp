@@ -1,0 +1,25 @@
+@use "colors" as c;
+
+/**********************
+ フォントに関する変数一覧 
+ **********************/
+/* フォントサイズ */
+$base-font-size: 10px;
+$default-font-size: 1.6rem !default;
+
+$xs-font-size: 1.6rem;
+$sm-font-size: 1.6rem;
+$md-font-size: 1.8rem;
+$lg-font-size: 1.8rem;
+$xl-font-size: 2.0rem;
+$xxl-font-size: 2.2rem;
+
+// ナビゲーションバー用
+$navbar-font-size: 1.5rem;
+$navbar-btn-size: 42px;
+
+// ニュース一覧用
+$newsbox-title-font-size: 3.2rem;
+
+/* フォントカラー */
+$default-text-color: c.$text !default;

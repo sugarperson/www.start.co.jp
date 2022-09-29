@@ -1,0 +1,33 @@
+@use "./variable/colors" as c;
+@use "./utility/mq" as m;
+
+.container{
+   position: absolute;
+   z-index: 1;
+   width: 100vw;
+   .NavigationBar__container{
+      position: relative;
+      z-index: 2;
+   }
+   .Heading__container{
+      z-index: 1;
+   }
+   .Leading__container{
+      z-index: 1;
+   }
+   .Main__container{
+      position: relative;
+      z-index: 1;
+      padding: 40px 20px 60px 20px;
+      width: 90%;
+      margin: 0 auto;
+      @include m.mq(wtb){
+         padding: 60px 30px 100px 30px;
+      }
+
+      .OfficeImage{
+         display: flex;
+         justify-content: center;
+      }
+   }
+}

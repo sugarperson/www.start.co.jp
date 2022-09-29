@@ -1,0 +1,25 @@
+@use "../../../../styles/variable/colors" as c;
+@use "../../../../styles/variable/fonts" as f;
+@use "../../../../styles/utility/mq" as m;
+
+.Map{
+   width: 100%;
+   max-width: 1110px;
+   margin: 50px auto 50px auto;
+   @include m.mq(wtb){
+      margin: 50px auto 80px auto;
+   }
+   .Map__iframe{
+      height: 300px;
+      @include m.mq(wtb){
+         height: 400px;
+      }
+   }
+   .Map__link{
+      display: block;
+      text-align: right;
+      font-size: 1.4rem;
+      color: c.$link;
+      text-decoration: underline solid 1px c.$link;
+   }
+}

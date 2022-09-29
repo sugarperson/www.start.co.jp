@@ -1,0 +1,38 @@
+@use "../../../styles/variable/colors" as c;
+@use "../../../styles/variable/fonts" as f;
+@use "../../../styles/utility/mq" as m;
+
+.Footer{
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   background-color: c.$theme;
+   padding: 0 20px;
+   height: 116px;
+   font-size: 1.4rem;
+   color: c.$footer-text;
+   @include m.mq(wtb){
+      padding: 0 50px;
+      height: 158px;
+   }
+
+   .Footer__contents{
+      @include m.mq(wtb){
+         width: 100%;
+         max-width: 1170px;
+         margin: 0 auto;
+         padding: 0 30px 0 30px;
+      }
+      .Footer__navs__itemList{
+         display: flex;
+         list-style: none;
+         margin: 0 auto 20px 0;
+         padding-left: 0;
+         column-gap: 25px;
+         font-weight: bold;
+      }
+      .copyright{
+         font-size: 1.2rem;
+      }
+   }
+}

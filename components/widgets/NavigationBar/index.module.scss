@@ -1,0 +1,212 @@
+@use "../../../styles/variable/colors" as c;
+@use "../../../styles/variable/fonts" as f;
+@use "../../../styles/utility/mq" as m;
+
+.NavigationBar {
+   display: flex;
+   justify-content: space-between;
+   background-color: white;
+   padding: 20px;
+   color: black;
+   height: 60px;
+   @include m.mq(wtb){
+      height: 90px;
+      padding: 30px 70px;
+   }
+
+   .Bland{
+      position: relative;
+      width: 107px;
+      height: 21px;
+      background-image: url("../../../public/images/logo.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      object-fit: fill;
+      position: relative;
+      @include m.mq(wtb){
+         width: 167px;
+         height: 33px;
+      }
+   }
+
+   .Menu{
+
+      .Menu__list{
+         display: none;
+         @include m.mq(wtb){
+            display: flex;
+            align-items: center;
+            column-gap: 30px;
+            margin: 0;
+            padding: 0;
+            line-height: 30px;
+            list-style: none;
+            .Menu__item{
+               display: flex;
+               align-items: center;
+               font-size: f.$navbar-font-size;
+               line-height: f.$navbar-btn-size;
+               font-weight: bold;
+               .Menu__item__link{
+                  line-height: 30px;
+               }
+               .Menu__item__link__active{
+                  line-height: 30px;
+                  color: #DD1B57;
+               }
+            }
+         }
+      }
+   }
+
+   .MenuBtn{
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: 0;
+      right: 0;
+      background-color: #DD1B57;
+      border: none;
+      @include m.mq(wtb){
+         display: none;
+      }
+
+      .MenuBtn__img{
+         color: c.$button-font;
+         font-size: f.$navbar-btn-size;
+      }
+   }
+
+   .MenuBtn__hidden{
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      top: 0;
+      right: -60px;
+      background-color: #DD1B57;
+      border: none;
+      animation-name: disapper;
+      animation-duration: 0.3s;
+      @keyframes disapper {
+         0%{
+            right: 0px;
+         }
+         100%{
+            right: -60px;
+         }
+      }
+      @include m.mq(wtb){
+         display: none;
+      }
+
+      .MenuBtn__img{
+         color: c.$button-font;
+         font-size: f.$navbar-btn-size;
+      }
+   }
+
+   .ModalWindow{
+      position: fixed;
+      top: 0;
+      right: -180px;
+      bottom: 0;
+      width: 180px;
+      background-color: #DD1B57;
+      transition-property: right;
+      transition-duration: 0.3s;
+      @include m.mq(wtb){
+         display: none;
+      }
+      
+      .ModalWindow__closeBtn{
+         display: block;
+         position: absolute;
+         top: 0;
+         right: -60px;
+         width: 60px;
+         height: 60px;
+         background-color: #DD1B57;
+         border: none;
+         transition-property: right;
+         transition-duration: 0.3s;
+         .ModalWindow__closeBtn__img{
+            color: c.$button-font;
+            font-size: f.$navbar-btn-size;
+         }
+      }
+      .ModalWindow__menuList{
+         margin: 0;
+         padding-top: 90px;
+         padding-left: 50px;
+         color: c.$button-font;
+         list-style: none;
+         display: flex;
+         flex-direction: column;
+         row-gap: 25px;
+
+         .ModalWindow__menuList__item{
+            font-size: f.$navbar-font-size;
+            font-weight: bold;
+            line-height: 16px;
+         }
+      }
+   }
+   
+   .ModalWindow__show{
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 180px;
+      background-color: #DD1B57;
+      animation-name: slideIn;
+      animation-duration: 0.3s;
+      @keyframes slideIn {
+         0%{
+            right: -180px;
+            height: 100vh;
+         }
+         100%{
+            right: 0px;
+            height: 100vh;
+         }
+      }
+
+      .ModalWindow__closeBtn{
+         display: block;
+         position: fixed;
+         top: 0;
+         right: 0;
+         width: 60px;
+         height: 60px;
+         background-color: #DD1B57;
+         border: none;
+         transition-property: right;
+         transition-duration: 0.3s;
+         .ModalWindow__closeBtn__img{
+            color: c.$button-font;
+            font-size: f.$navbar-btn-size;
+         }
+      }
+      .ModalWindow__menuList{
+         margin: 0;
+         padding-top: 90px;
+         padding-left: 50px;
+         color: c.$button-font;
+         list-style: none;
+         display: flex;
+         flex-direction: column;
+         row-gap: 25px;
+
+         .ModalWindow__menuList__item{
+            font-size: f.$navbar-font-size;
+            font-weight: bold;
+            line-height: 16px;
+         }
+      }
+   }
+   .ModalWindow__show.active{
+      background-color: black;
+   }
+}

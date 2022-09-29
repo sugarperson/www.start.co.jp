@@ -1,0 +1,52 @@
+@use "../variable/colors" as c;
+@use "../variable/fonts" as f;
+@use "../utility/mq" as m;
+
+:root {
+   font-size: f.$base-font-size;
+}
+
+html,
+body {
+   overflow-x: hidden;
+   scrollbar-width: none;
+   padding: 0;
+   margin: 0;
+   background-color: white;
+   color: c.$text;
+   font-family: 'Roboto', 'Noto Sans JP', sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+
+   font-size: f.$xs-font-size;
+   @include m.mq(sm){
+      font-size: f.$sm-font-size;
+   }
+   @include m.mq(tb){
+   }
+   @include m.mq(md){
+      font-size: f.$md-font-size;
+   }
+   @include m.mq(lg){
+      font-size: f.$lg-font-size;
+   }
+   @include m.mq(xl){
+      font-size: f.$xl-font-size;
+   }
+   @include m.mq(xxl){
+      font-size: f.$xxl-font-size;
+   }
+}
+
+body::-webkit-scrollbar{
+   display: none;
+}
+
+a {
+   color: inherit;
+   text-decoration: none;
+}
+ 
+* {
+   box-sizing: border-box;
+}

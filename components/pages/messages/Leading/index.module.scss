@@ -1,0 +1,31 @@
+@use "../../../../styles/variable/colors" as c;
+@use "../../../../styles/variable/fonts" as f;
+@use "../../../../styles/utility/mq" as m;
+
+.Leading__container{
+   margin: 0 auto 15px auto;
+   width: fit-content;
+   @include m.mq(wtb){
+      margin: 0 auto 20px auto;
+   }
+   .Leading__title{
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 2.4rem;
+      font-weight: bold;
+      color: c.$theme;
+      @include m.mq(wtb){
+         margin-bottom: 20px;
+         font-size: 4rem;
+      }
+   }
+   .Leading__subtitle{
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 1.5rem;
+      @include m.mq(wtb){
+         margin-bottom: 40px;
+         font-size: 1.8rem;
+      }
+   }
+}

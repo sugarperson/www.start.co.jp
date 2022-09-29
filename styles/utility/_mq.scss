@@ -1,0 +1,8 @@
+@use "../variable/breakpoints" as bp;
+
+// mixinの定義
+@mixin mq($breakpoint) {
+   @media screen and (min-width: #{map-get(bp.$breakpointList, $breakpoint)}) {
+      @content;
+   }
+}

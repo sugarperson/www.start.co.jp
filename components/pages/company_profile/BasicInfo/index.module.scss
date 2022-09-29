@@ -1,0 +1,48 @@
+@use "../../../../styles/variable/colors" as c;
+@use "../../../../styles/variable/fonts" as f;
+@use "../../../../styles/utility/mq" as m;
+
+.InfoBox{
+   width: 100%;
+   max-width: 1110px;
+   margin: 0 auto;
+
+   .InfoBox__list{
+      flex: 1;
+      list-style: none;
+      margin: 0 auto;
+      padding-left: 0;
+      
+      .Info{
+         border-bottom: 1px solid c.$NewsBox-list-border;
+         display: flex;
+         justify-content: start;
+         align-items: flex-start;
+         
+         .Info__title{
+            flex: 1;
+            min-width: 100px;
+            color: rgb(51,51,51);
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 20px 0;
+            @include m.mq(wtb){
+               padding: 30px;
+            }
+         }
+         
+         .Info__div{
+            flex: 4;
+            color: c.$NewsBox-date-font;
+            font-size: 1.5rem;
+            padding: 20px 0;
+            @include m.mq(wtb){
+               @include m.mq(wtb){
+                  padding: 30px;
+               }
+            }
+         }
+      }
+   }
+
+}

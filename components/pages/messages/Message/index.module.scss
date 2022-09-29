@@ -1,0 +1,44 @@
+@use "../../../../styles/variable/colors" as c;
+@use "../../../../styles/variable/fonts" as f;
+@use "../../../../styles/utility/mq" as m;
+
+.Message{
+   max-width: 800px;
+   margin: 0 auto;
+   padding: 0 20px;
+   @include m.mq(wtb){
+      padding: 0 30px;
+   }
+   .Message__ceo{
+      display: block;
+      width: 100px;
+      height: 100px;
+      margin: 0 15px 10px 0;
+      border-radius: 50%;
+      float: left;
+      background-image: url("../../../../public/images/ceo.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      object-fit: fill;
+      position: relative;
+      @include m.mq(wtb){
+         margin: 0 25px 15px 0;
+      }
+   }
+   
+   .Message__text{
+      margin: 0;
+      font-size: 1.6rem;
+      font-weight: 550;
+   
+      .thin{
+         font-weight: 400;
+      }
+      
+      .Message__text__link{
+         color: c.$link;
+         text-decoration: underline solid 1px;
+      }
+   }
+}

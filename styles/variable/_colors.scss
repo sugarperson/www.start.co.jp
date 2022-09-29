@@ -1,0 +1,22 @@
+/******************
+ 色についての変数一覧
+ ******************/
+// 共通な変数
+$theme: #DD1B57;
+$link: #359BF4;
+$background: white !default; // デフォルトの背景色
+$text: black !default; // デフォルトの文字色
+
+// components/widgets/NavigationBar
+$button-font: white;
+
+// components/widgets/Footer
+$footer-text: white;
+
+// components/pages/home/MainVisual
+$MainVisual-title-font: white;
+$MainVisual-subtitle-font: white;
+
+// components/pages/home/NewsBox
+$NewsBox-date-font: #4a4d50;
+$NewsBox-list-border: #cdd2d6;
