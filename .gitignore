@@ -38,3 +38,6 @@ next-env.d.ts
 node_modules
 .next
 out
+
+# ベータを使うので .github は無視
+.github
