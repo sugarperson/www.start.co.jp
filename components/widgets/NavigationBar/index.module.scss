@@ -34,6 +34,11 @@
 
       .Menu__list{
          display: none;
+
+         .Menu__item:hover{
+            color: #DD1B57;
+         }
+         
          @include m.mq(wtb){
             display: flex;
             align-items: center;
