@@ -34,7 +34,7 @@
          padding: 40px 30px;
          background-color: white;
          border-radius: 8px;
-         box-shadow: 0 3px 21px rgb(0 0 0 / 16%);
+         box-shadow: 0 3px 21px c.$ServiceCard-shadow;
 
          @include m.mq(wtb){
             padding: 50px;
