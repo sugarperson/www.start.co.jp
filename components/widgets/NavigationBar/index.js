@@ -5,8 +5,11 @@ import styles from "./index.module.scss";
 export default function Layout(props){
    return (
       <div className={styles.NavigationBar}>
-         <div className={styles.Bland}>
-         </div>
+         <Link href="/">
+            <a className={styles.Bland}>
+               {/* 背景画像としてCSSで画像を表示 */}
+            </a>
+         </Link>
          <nav className={styles.Menu}>
             <ul className={styles.Menu__list}>
                <li className={styles.Menu__item}>

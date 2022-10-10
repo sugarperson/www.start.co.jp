@@ -5,9 +5,9 @@
 .NavigationBar {
    display: flex;
    justify-content: space-between;
-   background-color: white;
+   background-color: c.$background;
    padding: 20px;
-   color: black;
+   color: c.$text;
    height: 60px;
    @include m.mq(wtb){
       height: 90px;
@@ -15,6 +15,7 @@
    }
 
    .Bland{
+      display: block;
       position: relative;
       width: 107px;
       height: 21px;
@@ -36,7 +37,7 @@
          display: none;
 
          .Menu__item:hover{
-            color: #DD1B57;
+            color: c.$theme;
          }
          
          @include m.mq(wtb){
@@ -58,7 +59,7 @@
                }
                .Menu__item__link__active{
                   line-height: 30px;
-                  color: #DD1B57;
+                  color: c.$theme;
                }
             }
          }
@@ -71,7 +72,7 @@
       height: 60px;
       top: 0;
       right: 0;
-      background-color: #DD1B57;
+      background-color: c.$theme;
       border: none;
       @include m.mq(wtb){
          display: none;
@@ -89,7 +90,7 @@
       height: 60px;
       top: 0;
       right: -60px;
-      background-color: #DD1B57;
+      background-color: c.$theme;
       border: none;
       animation-name: disapper;
       animation-duration: 0.3s;
@@ -117,7 +118,7 @@
       right: -180px;
       bottom: 0;
       width: 180px;
-      background-color: #DD1B57;
+      background-color: c.$theme;
       transition-property: right;
       transition-duration: 0.3s;
       @include m.mq(wtb){
@@ -131,7 +132,7 @@
          right: -60px;
          width: 60px;
          height: 60px;
-         background-color: #DD1B57;
+         background-color: c.$theme;
          border: none;
          transition-property: right;
          transition-duration: 0.3s;
@@ -164,7 +165,7 @@
       right: 0;
       bottom: 0;
       width: 180px;
-      background-color: #DD1B57;
+      background-color: c.$theme;
       animation-name: slideIn;
       animation-duration: 0.3s;
       @keyframes slideIn {
@@ -185,7 +186,7 @@
          right: 0;
          width: 60px;
          height: 60px;
-         background-color: #DD1B57;
+         background-color: c.$theme;
          border: none;
          transition-property: right;
          transition-duration: 0.3s;
