@@ -1,7 +1,7 @@
 /******************
  色についての変数一覧
  ******************/
-// 共通な変数
+// 共通の変数
 $theme: #DD1B57;
 $link: #359BF4;
 $background: white !default; // デフォルトの背景色
@@ -16,6 +16,7 @@ $footer-text: white;
 // components/pages/home/MainVisual
 $MainVisual-title-font: white;
 $MainVisual-subtitle-font: white;
+$MainVisual-title-shadow: rgb(0 0 0 / 25%);
 
 // components/pages/home/NewsBox
 $NewsBox-date-font: #4a4d50;
