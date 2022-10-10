@@ -35,7 +35,7 @@
          @include m.mq(wtb){
             font-size: 38px;
             line-height: 1;
-            text-shadow: 0 4px 6px rgb(0 0 0 / 25%);
+            text-shadow: 0 4px 6px c.$title-text-shadow;
          }
       }
    }
