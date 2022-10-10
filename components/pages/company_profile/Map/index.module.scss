@@ -1,10 +1,11 @@
 @use "../../../../styles/variable/colors" as c;
 @use "../../../../styles/variable/fonts" as f;
+@use "../../../../styles/variable/size" as s;
 @use "../../../../styles/utility/mq" as m;
 
 .Map{
    width: 100%;
-   max-width: 1110px;
+   max-width: s.$MainContent-max-width;
    margin: 50px auto 50px auto;
    @include m.mq(wtb){
       margin: 50px auto 80px auto;

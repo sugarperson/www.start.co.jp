@@ -1,10 +1,11 @@
 @use "../../../../styles/variable/colors" as c;
 @use "../../../../styles/variable/fonts" as f;
+@use "../../../../styles/variable/size" as s;
 @use "../../../../styles/utility/mq" as m;
 
 .NewsBox{
    width: 100%;
-   max-width: 1110px;
+   max-width: s.$MainContent-max-width;
    margin: 0 auto;
 
    .NewsBox__list{
